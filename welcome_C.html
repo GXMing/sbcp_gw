@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="汕头市三互科技有限公司"/>
+    <meta name="description" contetn="汕头市三互科技有限公司"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>汕头市三互科技有限公司</title>
+    <link rel="shortcut icon" type="favicon" href="sanbou.ico" />
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/base_C.css" />
+    <link rel="stylesheet" type="text/css" href="css/welcome_C.css" />
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        var mySwiper = new Swiper ('.w-banner .swiper-container', {
+                    direction: 'vertical',
+                    loop: false,
+                    autoplay : 1500,
+                    speed:1000,
+                    autoplayDisableOnInteraction : true,  //autoplay 操作使用后是否改变
+                    paginationClickable :true,    //导航按钮是否有效
+                    autoplayStopOnLast : true,    //到最后一个 autoplay 停止
+                    onAutoplayStop : function(){
+                        window.location.href="index_C.html";
+                    },
+        });
+    })
+    </script>
+</head>
+<body>
+    <div class="w-banner">
+        <div class="swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide ban1" style="background-image:url(image/wl1-bg.jpg);">
+                    <div class="txt-box">
+                        <img src="image/wl1-txt.png" />
+                    </div>
+                    <div class="mb-box">
+                        <img src="image/wl1-sj1.png" class="sj1" />
+                        <img src="image/wl1-sj2.png" class="sj2" />
+                        <img src="image/wl1-sj3.png" class="sj3" />
+                        <img src="image/wl1-sj4.png" class="sj4" />
+                    </div>
+                    <div class="pc-box">
+                        <img src="image/wl1-pc.png" />
+                    </div>
+                </li>
+                <li class="swiper-slide ban2" style="background-image:url(image/wl2-bg.jpg);">
+                    <div class="wl2-tit">
+                        <img src="image/wl2-txt.png" />
+                    </div>
+                    <div class="wl2-txt">
+                        <img src="image/wl2-txt2.png" />
+                    </div>
+                    <div class="wl2-img-box">
+                        <img src="image/wl2-img1.png"  />
+                    </div>
+                </li>
+                <li class="swiper-slide ban3" style="background-image:url(image/wl3-bg.jpg);">
+                    <div class="wl3-txt-box">
+                        <img src="image/wl3-tit.png" class="tit" />
+                        <img src="image/wl3-txt.png" class="txt" />
+                    </div>
+                    <div class="shou-box">
+                        <img src="image/wl3-shou.png" class="shou-bg" />
+                        <ul class="wl3-menu">
+                            <li><img src="image/wl3-m1.png" /></li>
+                            <li class="m2"><img src="image/wl3-m2.png" /></li>
+                            <li class="m3"><img src="image/wl3-m3.png" /></li>
+                            <li class="m4"><img src="image/wl3-m4.png" /></li>
+                            <li class="m5"><img src="image/wl3-m5.png" /></li>
+                            <li class="m6"><img src="image/wl3-m6.png" /></li>
+                            <li class="m7"><img src="image/wl3-m7.png" /></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+@charset "utf-8";
+body,
+ul,
+li,
+p,
+button,
+textarea,
+input,
+h1,
+h2,
+h3,
+figure,
+figcaption,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑", "Microsoft YaHei";
+  font-size: 14px;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  /*chrome、safari*/
+  -moz-osx-font-smoothing: grayscale;
+  /*firefox*/
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+/******************** 阿里巴巴矢量图标 ***********************/
+@font-face {
+  font-family: 'iconfont';
+  src: url('https://at.alicdn.com/t/font_502576_vn4ohg1xn6lmcxr.eot');
+  src: url('https://at.alicdn.com/t/font_502576_vn4ohg1xn6lmcxr.eot?#iefix') format('embedded-opentype'), url('https://at.alicdn.com/t/font_502576_vn4ohg1xn6lmcxr.woff') format('woff'), url('https://at.alicdn.com/t/font_502576_vn4ohg1xn6lmcxr.ttf') format('truetype'), url('https://at.alicdn.com/t/font_502576_vn4ohg1xn6lmcxr.svg#iconfont') format('svg');
+  
+  /* project id 502576 */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ico-dh:before {
+  content: "\e645";
+}
+.ico-dianhua:before {
+  content: "\e64c";
+}
+.ico-yj:before {
+  content: "\e698";
+}
+.ico-gs:before {
+  content: "\e65e";
+}
+.ico-sb:before {
+  content: "\e60c";
+}
+.ico-dk:before {
+  content: "\e632";
+}
+.ico-zj:before {
+  content: "\e600";
+}
+.ico-zl:before {
+  content: "\e60d";
+}
+.ico-shibao:before {
+  content: "\e633";
+}
+.ico-ls:before {
+  content: "\e6e0";
+}
+.ico-cs:before {
+  content: "\e79e";
+}
+.ico-cpbz:before {
+  content: "\e641";
+}
+.ico-cpcz:before {
+  content: "\e60a";
+}
+.ico-cpwl:before {
+  content: "\e699";
+}
+.ico-cpgt:before {
+  content: "\e82b";
+}
+.ico-cpds:before {
+  content: "\e764";
+}
+.ico-cpwx:before {
+  content: "\e67b";
+}
+.ico-cpdh:before {
+  content: "\e69f";
+}
+.ico-scck:before {
+  content: "\e6dd";
+}
+.ico-scgb:before {
+  content: "\e630";
+}
+body {
+  min-width: 1200px;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+.lddp:after {
+  content: "";
+  display: inline-block;
+  line-height: 0;
+  height: 0;
+  font-size: 0;
+  width: 100%;
+}
+.wrap {
+  width: 1170px;
+  margin: 0 auto;
+}
+/******************** 头部 *********************/
+/* 导航置顶插件样式 */
+.hd-fixed-top {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  background-color: rgba(49, 65, 124, 0.8);
+  transition: all .5s ease 0s;
+  -moz-transition: all .5s ease 0s;
+  -webkit-transition: all .5s ease 0s;
+  -o-transition: all .5s ease 0s;
+}
+.hd-fixed-top:hover {
+  background-color: #31417c;
+}
+.header {
+  background: #31417c;
+  height: 76px;
+}
+.header h1 {
+  line-height: 0;
+  font-size: 0;
+  text-indent: -9999px;
+}
+.header .hd-logo {
+  float: left;
+  margin-top: 8px;
+}
+.header .hd-logo a {
+  display: block;
+  font-size: 0;
+  margin-top: ;
+}
+.header .hd-logo a .txt {
+  color: #fff;
+  vertical-align: bottom;
+  display: inline-block;
+  margin-left: 10px;
+}
+.header .hd-nav {
+  float: right;
+}
+.header .hd-nav ul li {
+  float: left;
+  width: 106px;
+  height: 76px;
+  line-height: 76px;
+  color: #fff;
+  text-align: center;
+  transition: all .3s ease 0s;
+  -moz-transition: all .3s ease 0s;
+  -webkit-transition: all .3s ease 0s;
+  -o-transition: all .3s ease 0s;
+}
+.header .hd-nav ul li a {
+  color: inherit;
+  display: block;
+}
+.header .hd-nav ul li:hover {
+  color: #f7b20c;
+  line-height: 70px;
+}
+.header .hd-nav ul li:hover a {
+  color: #inherit;
+}
+.header .hd-nav ul .active a {
+  color: #f7b20c;
+}
+/* 联系我们 */
+.main .main-contact {
+  background: url(../image/mcontact-bg.jpg) center no-repeat;
+}
+.main .main-contact .item-tit,
+.main .main-contact .item-txt {
+  color: #fff;
+}
+.main .main-contact .form {
+  font-size: 0;
+  margin-top: 64px;
+  padding-bottom: 60px;
+}
+.main .main-contact .form input {
+  width: 510px;
+  height: 54px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 0;
+  margin: 0 86px 26px 0;
+  padding: 0 20px;
+}
+.main .main-contact .form input:nth-child(2n) {
+  margin-right: 0;
+}
+.main .main-contact .form textarea {
+  width: 510px;
+  height: 130px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 0;
+  margin-right: 86px;
+  padding: 20px;
+  resize: none;
+}
+.main .main-contact .form button {
+  width: 270px;
+  height: 54px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-size: 22px;
+  vertical-align: bottom;
+}
+@-webkit-keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+@keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+.hvr-ripple-out {
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+}
+.hvr-ripple-out::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  animation-duration: 1s;
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+.hvr-ripple-out:hover:before {
+  -webkit-animation-name: hvr-ripple-out;
+  animation-name: hvr-ripple-out;
+}
+/******* 尾部 ********/
+.footer .ft-txt {
+  text-align: center;
+  font-size: 0;
+}
+.footer .ft-txt p {
+  line-height: 56px;
+  display: inline-block;
+  font-size: 0;
+  width: 360px;
+}
+.footer .ft-txt p i,
+.footer .ft-txt p span {
+  vertical-align: middle;
+}
+.footer .ft-txt p span {
+  font-size: 14px;
+  margin-left: 6px;
+}
+.footer .ft-txt p a {
+  color: inherit;
+}

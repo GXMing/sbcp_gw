@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="汕头市三互科技有限公司"/>
+    <meta name="description" contetn="汕头市三互科技有限公司"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>汕头市三互科技有限公司</title>
+    <link type="favicon" rel="shortcut icon" href="sanbou.ico" />
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/M_index_C.css" />
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js"></script>
+    <script type="text/javascript" src="js/message.js"></script>
+    <script type="text/javascript">
+    $(function(){
+
+        /************** banner轮播 ************/
+        var mySwiper = new Swiper ('.main-banner .swiper-container', {
+                                direction: 'horizontal',
+                                loop: true,
+                                //autoplay : 3000,
+                                effect : 'fade',
+                                pagination: '.main-banner .swiper-pagination',
+                                autoplayDisableOnInteraction : false,
+                                paginationClickable :true,
+                            });
+
+
+
+        /************** 
+        导航置顶隐藏加左拉 
+        ***************/
+        function nav_fix_left(){
+
+            //控制置顶导航的开关
+            var scrollstart = true;
+
+            function hd_fixed_top(){
+                var $header = $(".header");
+                var hd_h = $header.height();
+                var hd_w = $header.width();
+                $header.height(hd_h);
+                /*包裹节点*/
+                $header.wrapInner("<div class='hd-fixed-top'></div>");
+
+                var hd_offsettop = $header.offset().top;
+                var ss = $(window).scrollTop();
+                $(window).scroll(function(){
+
+                    var s = $(window).scrollTop();
+                    if(s>hd_h & scrollstart & s>ss){
+                        $('.hd-fixed-top').css({
+                            'position':'fixed',
+                            'top':'-'+hd_h+'px',
+                        });
+                        ss = s;
+
+                    }else if(s <= hd_offsettop){
+                        $('.hd-fixed-top').css({
+                            'position':'relative',
+                            'top':0,
+                        });
+                    }
+                    else{
+                        $('.hd-fixed-top').css({
+                                'position':'fixed',
+                                'top':0,
+                            });
+                        ss = s;
+                    }
+                })
+            }
+            hd_fixed_top();
+
+            //添加遮罩
+            $('.Tbody-box').append("<div class='Tzindex'></div>");
+
+            //Tbody高度
+            var nav_h = $('.nav').height();
+            $('.Tbody-box').css('minHeight',nav_h+'px');
+
+            //设置nav长度
+            var nav_w = "5.6rem";
+            $(".nav").css("width",nav_w);
+
+            var Tnavtime = null;  //收起时的导航隐藏定时器
+
+            /*导航按钮*/
+            function closenav(){
+                $('.Tzindex').hide();
+                $('.Tbody-box').css('left','0');
+                Tnavtime = setTimeout(function(){$('.nav').hide();},1000);
+                scrollstart = true;
+                $(document).off();
+                return false;
+            };
+            $('.nav-btn').click(function(){
+                var Tbody_l = parseInt($('.Tbody-box').css('left'));
+                if(Tbody_l == 0){
+                    clearTimeout(Tnavtime);
+                    $('.Tbody-box').css('left',nav_w);
+                    $('.nav').show();
+                    $('.Tzindex').show();
+                    scrollstart = false;
+                    $(document).on("click touchend",function(){
+                            closenav();
+                            return false;
+                        })
+                    return false;
+                }
+            });
+        };
+        nav_fix_left();
+
+
+        /************* 
+            弹框 
+        ************/
+        function tk_fun(){
+            var top = 0;
+            $("#tankuang_btn").click(function(){
+
+                //var tk_h = $(window).outerHeight() - $('.header').outerHeight();
+                //$(".tankuang").css("height",tk_h+'px');
+
+                //var tkc_h = tk_h - $(".tgb_btn").outerHeight();
+                //$(".tk_content").css("height",tkc_h+'px');
+                $(".tankuang").addClass('tankuang_totop');
+
+                top = $(window).scrollTop();//获取页面的scrollTop；
+                $('body').css("top",-top+"px");//给body一个负的top值；
+                $('body').addClass('add');//给body增加一个类，position:fixed; 
+
+            });
+
+            $("#tk_gb").click(function(){
+                $(".tankuang").removeClass('tankuang_totop');
+                $('html,body').removeClass('ovfHiden');
+                
+                $('body').removeClass('add');//去掉给body的类
+                $(window).scrollTop(top);//设置页面滚动的高度，如果不设置，关闭弹出层时页面会回到顶部。
+            });
+        };
+        tk_fun();
+    });
+    </script>
+</head>
+<body>
+
+    <div class="Thtml-box">
+         <!-- 头部 -->
+         <header class="header">
+            <h1 style="display:none;">汕头市三互科技有限公司</h1>
+            <div class="wrap">
+                <div class="hd-left">
+                    <a href="###">
+                        <img src="M_image/hd-logo.png" class="hd-logo" />
+                        <p class="txt">把世界连起来<br />让企业享受一切</p>
+                    </a>
+                </div>
+                <div class="hd-nav">
+                    <a class="nav-btn" href="javascript:;"><i class="iconfont ico-hdbtn"></i></a>
+                </div>
+            </div>
+         </header>
+        
+        <!-- 导航 -->
+        <nav class="nav">
+            <h3 style="display:none;">网站导航</h3>
+            <ul>
+               <li><a href="###">网站</a></li>
+               <li><a href="###">三互产品</a></li>
+               <li><a href="###">企业服务</a></li>
+               <li><a href="###">企业传媒</a></li>
+               <li><a href="###">解决方案</a></li>
+               <li><a href="###">行业资讯</a></li>
+               <li><a href="###">联系我们</a></li>
+           </ul>
+        </nav>
+
+        <div class="Tbody-box">
+            <!-- 主体 -->
+            <div class="main">
+                <!-- banner -->
+                <div class="main-banner">
+                    <div class="swiper-container">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide"><img src="M_image/mbanner1.jpg" /></li>
+                            <li class="swiper-slide"><img src="M_image/mbanner2.jpg" /></li>
+                        </ul>
+                        <!-- 如果需要分页器 -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <!-- 服务数据 -->
+                <div class="main-sj">
+                    <ul class="sj-menu clearfix wrap">
+                        <li>
+                            <p class="sz"><em>1,988</em></p>
+                            <strong class="wz">服务网站</strong>
+                        </li>
+                        <li>
+                            <p class="sz"><em>433</em></p>
+                            <strong class="wz">满意客户</strong>
+                        </li>
+                        <li>
+                            <p class="sz"><em>10,976</em></p>
+                            <strong class="wz">WEB服务</strong>
+                        </li>
+                        <li>
+                            <p class="sz"><em>29</em></p>
+                            <strong class="wz">覆盖行业</strong>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 服务内容 -->
+                <div class="main-service">
+                    <h2 class="item-tit">一站式企业互联网云服务</h2>
+                    <p class="item-txt">建站、营销、电商、协同、管理、专业产品<br />助您轻松实现智能运营</p>
+                    <!-- 4个服务菜单 -->
+                    <section class="ser-item">
+                        <h3 class="s-tit">网<br />站<br />类<br />型</h3>
+                        <ul class="s-box">
+                            <li>
+                                <a href="###">
+                                    <div class="col-1"><img src="M_image/s-ico1.png"  /></div>
+                                    <div class="col-2">
+                                        <p class="box-tit">零售商城</p>
+                                        <p class="box-txt">通过不同营销模式，<br />刺激平台业绩的量化</p>
+                                    </div>
+                                    <div class="col-3"><i class="iconfont ico-jt"></i></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <div class="col-1"><img src="M_image/s-ico2.png"  /></div>
+                                    <div class="col-2">
+                                        <p class="box-tit">分销商城</p>
+                                        <p class="box-txt">丰富的分销体系，灵活<br>搭配，充分激活市场。</p>
+                                    </div>
+                                    <div class="col-3"><i class="iconfont ico-jt"></i></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <div class="col-1"><img src="M_image/s-ico3.png"  /></div>
+                                    <div class="col-2">
+                                        <p class="box-tit">移动商城</p>
+                                        <p class="box-txt">帮客户实现不同社交<br>电商平台导购服务。</p>
+                                    </div>
+                                    <div class="col-3"><i class="iconfont ico-jt"></i></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <div class="col-1"><img src="M_image/s-ico4.png"  /></div>
+                                    <div class="col-2">
+                                        <p class="box-tit">会员商城</p>
+                                        <p class="box-txt">通过不同身份特权，<br>激发用户消费能力。</p>
+                                    </div>
+                                    <div class="col-3"><i class="iconfont ico-jt"></i></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="ser-item">
+                        <h3 class="s-tit">基<br />础<br />服<br />务</h3>
+                        <ul class="s-box">
+                            <li>
+                                <a href="###">
+                                    <div class="col-1"><img src="M_image/s-ico1.png"  /></div>
+                                    <div class="col-2">
+                                        <p class="box-tit">零售商城</p>
+                                        <p class="box-txt">通过不同营销模式，<br />刺激平台业绩的量化</p>
+                                    </div>
+                                    <div class="col-3"><i class="iconfont ico-jt"></i></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <div class="col-1"><img src="M_image/s-ico2.png"  /></div>
+                                    <div class="col-2">
+                                        <p class="box-tit">分销商城</p>
+                                        <p class="box-txt">丰富的分销体系，灵活<br>搭配，充分激活市场。</p>
+                                    </div>
+                                    <div class="col-3"><i class="iconfont ico-jt"></i></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="ser-item">
+                        <h3 class="s-tit">优<br />化<br />推<br />广</h3>
+                        <ul class="s-box">
+                            <li>
+                                <a href="###">
+                                    <div class="col-1"><img src="M_image/s-ico1.png"  /></div>
+                                    <div class="col-2">
+                                        <p class="box-tit">零售商城</p>
+                                        <p class="box-txt">通过不同营销模式，<br />刺激平台业绩的量化</p>
+                                    </div>
+                                    <div class="col-3"><i class="iconfont ico-jt"></i></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <div class="col-1"><img src="M_image/s-ico1.png"  /></div>
+                                    <div class="col-2">
+                                        <p class="box-tit">零售商城</p>
+                                        <p class="box-txt">通过不同营销模式，<br />刺激平台业绩的量化</p>
+                                    </div>
+                                    <div class="col-3"><i class="iconfont ico-jt"></i></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="ser-item">
+                        <h3 class="s-tit">综<br />合<br />商<br />城</h3>
+                        <ul class="s-box">
+                            <li>
+                                <a href="###">
+                                    <div class="col-1"><img src="M_image/s-ico1.png"  /></div>
+                                    <div class="col-2">
+                                        <p class="box-tit">零售商城</p>
+                                        <p class="box-txt">通过不同营销模式，<br />刺激平台业绩的量化</p>
+                                    </div>
+                                    <div class="col-3"><i class="iconfont ico-jt"></i></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="###">
+                                    <div class="col-1"><img src="M_image/s-ico1.png"  /></div>
+                                    <div class="col-2">
+                                        <p class="box-tit">零售商城</p>
+                                        <p class="box-txt">通过不同营销模式，<br />刺激平台业绩的量化</p>
+                                    </div>
+                                    <div class="col-3"><i class="iconfont ico-jt"></i></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- 策划方案 -->
+                <div class="main-case">
+                    <h2 class="item-tit">三互科技，让您的网站无所不能</h2>
+                    <p class="item-txt">做企业、个人、网点、手机微信网站、小程序样样行，<br />内置超多营销推广工具</p>
+                    <div class="case-bottom">
+                        <div class="wrap">
+                            <div class="c-b-img"><img src="image/mcase-img1.png"  /></div>
+                            <p class="tit2">策略规划解决方案<br /><span>多年的从业经验提供合理化建议</span></p>
+                        </div>
+                        <ul class="c-b-menu">
+                            <li>互联策略规划</li>
+                            <li>软文文案撰写</li>
+                            <li>网络定制解决方案</li>
+                            <li>网络运营维护</li>
+                            <li>微信内容策划</li>
+                            <li>微信公众号代运营</li>
+                        </ul>
+                        <div class="c-more"><a href="javascript:;" id="tankuang_btn">查看更多</a></div>
+                    </div>
+                </div>
+
+                <!-- 新闻资讯 -->
+                <div class="main-news">
+                    <h2 class="item-tit">三互科技核心团队</h2>
+                    <p class="item-txt">Core team</p>
+                    <div class="n-top-box wrap">
+                        <p><img src="M_image/mnews-img.jpg"  class="n-img" /></p>
+                        <p class="n-tit">汕头市三互科技有限公司专业团队给你专属体验！</p>
+                        <p class="n-txt">量身打造专属的私人订制体验,献给每一位乐享极致的生活美学家。 我们着眼于新潮...</p>
+                        <div class="n-more"><a href="###">MORE&#62;</a></div>
+                    </div>
+                    <ul class="news-menu wrap">
+                        <li>
+                            <a href="M_news_details_C.html">
+                                <p class="n-time"><span class="t1">01</span><span class="t2">13</span></p>
+                                <p class="n-tit">七成消费者可持续消费意识强</p>
+                                <p class="n-txt">在我国消费升级的浪潮中，近年来，可持续消费逐......</p>    
+                            </a>
+                        </li>
+                        <li>
+                            <a href="M_news_details_C.html">
+                                <p class="n-time"><span class="t1">01</span><span class="t2">13</span></p>
+                                <p class="n-tit">七成消费者可持续消费意识强</p>
+                                <p class="n-txt">在我国消费升级的浪潮中，近年来，可持续消费逐......</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="M_news_details_C.html">
+                                <p class="n-time"><span class="t1">01</span><span class="t2">13</span></p>
+                                <p class="n-tit">七成消费者可持续消费意识强</p>
+                                <p class="n-txt">在我国消费升级的浪潮中，近年来，可持续消费逐......</p>   
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 联系我们 -->
+                <div class="main-contact">
+                    <h2 class="item-tit">联系我们</h2>
+                    <p class="item-txt">Contact Us</p>
+                    <div class="form wrap">
+                        <input type="text" placeholder="您的名字" id="name" />
+                        <input type="text" placeholder="您的号码" id="phone" />
+                        <input type="text" placeholder="您的地址" id="address" />
+                        <input type="text" placeholder="您的邮箱" id="email" />
+                        <textarea type="text" placeholder="您的留言..." id="text"></textarea>
+                        <button class="submit-btn">提交</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 尾部 -->
+            <footer class="footer">
+                <div class="ft-txt">
+                    <p><i class="iconfont ico-dianhua"></i><span>客服：0754-88123456</span></p>
+                    <p><i class="iconfont ico-dh"></i><span>地址：广东省汕头市金平区友谊大厦2101</span></p>
+                </div>
+            </footer>
+        </div>
+
+        <!-- 弹框 -->
+        <div class="tankuang">
+            <div class="tgb_btn">
+                <a href="###" id="tk_gb"><i class="iconfont ico-gb"></i></a>
+            </div>
+            <div class="tk_content">
+                <p class="tit">三互科技，让您的网站无所不能</p>
+                <div class="txt-box">
+                    <!-- 策划优势 -->
+                    <ul class="case-menu wrap">
+                        <li>
+                            <p class="c-tit">7x24小时售后支持</p>
+                            <p class="c-txt">全国7x24小时客服热线</p>
+                        </li>
+                        <li>
+                            <p class="c-tit">私人定制专属</p>
+                            <p class="c-txt">网站一对一精工细作</p>
+                        </li>
+                        <li>
+                            <p class="c-tit">独立域名</p>
+                            <p class="c-txt">可绑自己的独立域名</p>
+                        </li>
+                        <li>
+                            <p class="c-tit">定期升级</p>
+                            <p class="c-txt">随着用户需求定期迭代优化</p>
+                        </li>
+                        <li>
+                            <p class="c-tit">PC+手机站同域名</p>
+                            <p class="c-txt">无需单独购买</p>
+                        </li>
+
+                        <li>
+                            <p class="c-tit">分享</p>
+                            <p class="c-txt">可分享到微信或微博</p>
+                        </li>
+                        <li>
+                            <p class="c-tit">留言板</p>
+                            <p class="c-txt">首页留言板功能模块</p>
+                        </li>
+                        <li>
+                            <p class="c-tit">微信无缝对接</p>
+                            <p class="c-txt">超强微信应用</p>
+                        </li>
+                        <li>
+                            <p class="c-tit">多种营销工具</p>
+                            <p class="c-txt">高效多维传播引来客流量</p>
+                        </li>
+                        <li>
+                            <p class="c-tit">一网站多种语言</p>
+                            <p class="c-txt">海内外营销无阻</p>
+                        </li>
+
+                        <li>
+                            <p class="c-tit">小程序众多流量入口</p>
+                            <p class="c-txt">集展示互动、交易为一体</p>
+                        </li>
+                        <li>
+                            <p class="c-tit">商城形象实力展示强</p>
+                            <p class="c-txt">激发顾客购买</p>
+                        </li>
+                        <li>
+                            <p class="c-tit">强大电商应用</p>
+                            <p class="c-txt">促进成交</p>
+                        </li>
+                        <li>
+                            <p class="c-tit">提升服务</p>
+                            <p class="c-txt">留住更多客户</p>
+                        </li>
+                        <li>
+                            <p class="c-tit">SEO优化</p>
+                            <p class="c-txt">PC端+手机移动端搜索无阻</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+     </div>
+    
+
+<script type="text/javascript" src="js/correctrem.js"></script>
+</body>
+</html>

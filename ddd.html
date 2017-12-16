@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="ddd"/>
+    <meta name="description" contetn="ddd"/>
+    <title>ddd</title>
+    <style type="text/css">
+*{
+  margin:0;
+  padding:0;
+}
+
+
+/* 导航置顶插件样式 */
+.hd-fixed-top {
+  width: 100%;
+  position:relative;
+  top:0;
+  left:0;
+  z-index:90;
+  background-color: #fff;
+  transition: all .5s ease 0s;
+  -moz-transition: all .5s ease 0s;
+  -webkit-transition: all .5s ease 0s;
+  -o-transition: all .5s ease 0s;
+}
+.Thtml-box{
+  margin: 0 auto;
+  overflow: hidden;
+}
+.Tbody-box {
+  position: relative;
+  left:0;
+  z-index:70;
+  transition: all .5s ease 0s;
+  -moz-transition: all .5s ease 0s;
+  -webkit-transition: all .5s ease 0s;
+  -o-transition: all .5s ease 0s;
+  background-color: #fff;
+}
+.Tzindex {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  display: none;
+z-index: 999;
+}
+.nav{
+  position: fixed;
+  top: 0;
+  z-index:60;
+  background-color: #000;
+  height: 100%;
+  display: none;
+}
+    </style>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<!-- 可以设置nav长度，与整个Thtml长度 -->
+  <div class="Thtml-box">
+      <div class="header"><button class="nav-btn">dddbr</div>
+      <div class="nav" style="width:400px;background:black;">cccc</div>
+      <div class="Tbody-box">
+          <p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+      </div>
+  </div>
+<script type="text/javascript">
+
+
+    /*导航置顶隐藏加左拉*/
+    function nav_fix_left(){
+
+        //控制置顶导航的开关
+        var scrollstart = true;
+        function hd_fixed_top(){
+            var hd_h = $('.header').height();
+            var hd_w = $('.header').width();
+            $('.header').height(hd_h);
+            /*包裹节点*/
+            $('.header').wrapInner("<div class='hd-fixed-top'></div>");
+
+            var hd_offsettop = $('.header').offset().top;
+            var ss = $(window).scrollTop();
+            $(window).scroll(function(){
+
+                var s = $(window).scrollTop();
+                if(s > hd_h&scrollstart&s>ss){
+                    $('.hd-fixed-top').css({
+                        'position':'fixed',
+                        'top':'-'+hd_h+'px',
+                    });
+                    ss = s;
+
+                }else if(s <= hd_offsettop){
+                    $('.hd-fixed-top').css({
+                        'position':'relative',
+                        'top':0,
+                    });
+                }
+                else{
+                    $('.hd-fixed-top').css({
+                            'position':'fixed',
+                            'top':0,
+                        });
+                    ss = s;
+                }
+            })
+        }
+        hd_fixed_top();
+
+        //添加遮罩
+        $('.Tbody-box').append("<div class='Tzindex'></div>");
+        //Tbody高度
+        var nav_h = $('.nav').height();
+        $('.Tbody-box').css('minHeight',nav_h+'px');
+
+        var Tnavtime = null;  //收起时的导航隐藏定时器
+        var nav_w = $('.nav').css('width');
+        /*导航按钮*/
+        function closenav(){
+            $('.Tzindex').hide();
+            $('.Tbody-box').css('left','0');
+            Tnavtime = setTimeout(function(){$('.nav').hide();},1000);
+            scrollstart = true;
+            $(document).off();
+            return false;
+        };
+        $('.nav-btn').click(function(){
+            var Tbody_l = parseInt($('.Tbody-box').css('left'));
+            if(Tbody_l == 0){
+                clearTimeout(Tnavtime);
+                $('.Tbody-box').css('left',nav_w);
+                $('.nav').show();
+                $('.Tzindex').show();
+                scrollstart = false;
+                $(document).on("click",function(){
+                        closenav();
+                        return false;
+                    })
+                return false;
+            }
+        });
+    };
+    nav_fix_left();
+</script>
+
+</body>
+</html>
