@@ -23,7 +23,7 @@ window.onload=function(){
   }
   function addMapOverlay(){
     var markers = [
-      {content:"汕头市金平区友谊大厦2010",title:"汕头市三互科技有限公司",imageOffset: {width:0,height:3},position:{lat:23.371781,lng:116.720239}},
+      {content:"汕头市金平区友谊大厦2101",title:"汕头市三互科技有限公司",imageOffset: {width:0,height:3},position:{lat:23.371781,lng:116.720239}},
     ];
     for(var index = 0; index < markers.length; index++ ){
       var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);

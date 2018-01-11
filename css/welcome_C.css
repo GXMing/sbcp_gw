@@ -4,14 +4,16 @@ body {
   height: 100%;
 }
 body {
-  min-width: auto;
+  min-width: 100%;
   overflow: hidden;
 }
 .w-banner {
   height: 100%;
+  width: 100%;
 }
 .w-banner .swiper-container {
   height: 100%;
+  width: 100%;
 }
 .w-banner .swiper-slide {
   height: 100%;
@@ -25,11 +27,16 @@ body {
   width: 26%;
   position: absolute;
   top: 16%;
-  left: -20%;
-  transition: all .8s ease 0s;
-  -moz-transition: all .8s ease 0s;
-  -webkit-transition: all .8s ease 0s;
-  -o-transition: all .8s ease 0s;
+  left: 4%;
+  transition: transform .8s ease 0s;
+  -moz-transition: transform .8s ease 0s;
+  -webkit-transition: transform .8s ease 0s;
+  -o-transition: transform .8s ease 0s;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 .w-banner .ban1 .txt-box img {
   display: block;
@@ -38,12 +45,18 @@ body {
 .w-banner .ban1 .mb-box {
   position: absolute;
   top: 50%;
-  left: 16%;
+  /*left:16%;*/
+  left: 4%;
+  -webkit-transform: translateX(40%);
+  -moz-transform: translateX(40%);
+  -ms-transform: translateX(40%);
+  -o-transform: translateX(40%);
+  transform: translateX(40%);
   width: 46%;
-  transition: all 1.8s linear 0s;
-  -moz-transition: all 1.8s linear 0s;
-  -webkit-transition: all 1.8s linear 0s;
-  -o-transition: all 1.8s linear 0s;
+  transition: transform 1.2s linear 0s;
+  -moz-transition: transform 1.2s linear 0s;
+  -webkit-transition: transform 1.2s linear 0s;
+  -o-transition: transform 1.2s linear 0s;
 }
 .w-banner .ban1 .mb-box img {
   width: 21%;
@@ -52,29 +65,59 @@ body {
 .w-banner .ban1 .mb-box .sj1 {
   z-index: 5;
 }
+.w-banner .ban1 .mb-box .sj2,
+.w-banner .ban1 .mb-box .sj3,
+.w-banner .ban1 .mb-box .sj4 {
+  margin-left: -8%;
+  transition-property: transform;
+  -moz-transition-property: transform;
+  -webkit-transition-property: transform;
+  -o-transition-property: transform;
+  -webkit-transition-duration: .3s;
+  -moz-transition-duration: .3s;
+  -ms-transition-duration: .3s;
+  -o-transition-duration: .3s;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+}
 .w-banner .ban1 .mb-box .sj2 {
   z-index: 4;
-  margin-left: -21.7%;
-  transition: all .4s ease .4s;
-  -moz-transition: all .4s ease .4s;
-  -webkit-transition: all .4s ease .4s;
-  -o-transition: all .4s ease .4s;
+  transition-delay: .3s;
+  -moz-transition-delay: .3s;
+  -webkit-transition-delay: .3s;
+  -o-transition-delay: .3s;
+  -webkit-transform: translateX(-66%);
+  -moz-transform: translateX(-66%);
+  -ms-transform: translateX(-66%);
+  -o-transform: translateX(-66%);
+  transform: translateX(-66%);
 }
 .w-banner .ban1 .mb-box .sj3 {
   z-index: 3;
-  margin-left: -21.7%;
-  transition: all .4s ease .8s;
-  -moz-transition: all .4s ease .8s;
-  -webkit-transition: all .4s ease .8s;
-  -o-transition: all .4s ease .8s;
+  transition-delay: .6s;
+  -moz-transition-delay: .6s;
+  -webkit-transition-delay: .6s;
+  -o-transition-delay: .6s;
+  -webkit-transform: translateX(-130%);
+  -moz-transform: translateX(-130%);
+  -ms-transform: translateX(-130%);
+  -o-transform: translateX(-130%);
+  transform: translateX(-130%);
 }
 .w-banner .ban1 .mb-box .sj4 {
   z-index: 2;
-  margin-left: -21.7%;
-  transition: all .4s ease 1.2s;
-  -moz-transition: all .4s ease 1.2s;
-  -webkit-transition: all .4s ease 1.2s;
-  -o-transition: all .4s ease 1.2s;
+  transition-delay: .9s;
+  -moz-transition-delay: .9s;
+  -webkit-transition-delay: .9s;
+  -o-transition-delay: .9s;
+  -webkit-transform: translateX(-194%);
+  -moz-transform: translateX(-194%);
+  -ms-transform: translateX(-194%);
+  -o-transform: translateX(-194%);
+  transform: translateX(-194%);
 }
 .w-banner .ban1 .pc-box {
   width: 54%;
@@ -90,10 +133,10 @@ body {
   -ms-transform: scale(0);
   -o-transform: scale(0);
   transform: scale(0);
-  transition: all .8s ease 0s;
-  -moz-transition: all .8s ease 0s;
-  -webkit-transition: all .8s ease 0s;
-  -o-transition: all .8s ease 0s;
+  transition: transform .8s ease 0s;
+  -moz-transition: transform .8s ease 0s;
+  -webkit-transition: transform .8s ease 0s;
+  -o-transition: transform .8s ease 0s;
 }
 .w-banner .ban2 {
   position: relative;
@@ -105,24 +148,34 @@ body {
 .w-banner .ban2 .wl2-tit {
   position: absolute;
   top: 16%;
-  left: 20%;
+  left: 8%;
   width: 40%;
   opacity: 0;
-  transition: all 1s ease 0s;
-  -moz-transition: all 1s ease 0s;
-  -webkit-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
+  -webkit-transform: translateX(60%);
+  -moz-transform: translateX(60%);
+  -ms-transform: translateX(60%);
+  -o-transform: translateX(60%);
+  transform: translateX(60%);
+  transition: transform 1s ease,opacity 1s ease;
+  -moz-transition: transform 1s ease,opacity 1s ease;
+  -webkit-transition: transform 1s ease,opacity 1s ease;
+  -o-transition: transform 1s ease,opacity 1s ease;
 }
 .w-banner .ban2 .wl2-txt {
   position: absolute;
   top: 45%;
-  left: -10%;
+  left: 9%;
   width: 22%;
   opacity: 0;
-  transition: all 1s ease 0s;
-  -moz-transition: all 1s ease 0s;
-  -webkit-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
+  -webkit-transform: translateX(-60%);
+  -moz-transform: translateX(-60%);
+  -ms-transform: translateX(-60%);
+  -o-transform: translateX(-60%);
+  transform: translateX(-60%);
+  transition: transform 1s ease,opacity 1s ease;
+  -moz-transition: transform 1s ease,opacity 1s ease;
+  -webkit-transition: transform 1s ease,opacity 1s ease;
+  -o-transition: transform 1s ease,opacity 1s ease;
 }
 .w-banner .ban2 .wl2-img-box {
   position: absolute;
@@ -134,10 +187,10 @@ body {
   -ms-transform: scale(0) rotate(0deg);
   -o-transform: scale(0) rotate(0deg);
   transform: scale(0) rotate(0deg);
-  transition: all 1s ease 0s;
-  -moz-transition: all 1s ease 0s;
-  -webkit-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
+  transition: transform 1s ease 0s;
+  -moz-transition: transform 1s ease 0s;
+  -webkit-transition: transform 1s ease 0s;
+  -o-transition: transform 1s ease 0s;
 }
 .w-banner .ban3 {
   position: relative;
@@ -163,10 +216,10 @@ body {
   -ms-transform: scale(0);
   -o-transform: scale(0);
   transform: scale(0);
-  transition: all .4s ease 0s;
-  -moz-transition: all .4s ease 0s;
-  -webkit-transition: all .4s ease 0s;
-  -o-transition: all .4s ease 0s;
+  transition: transform .4s ease 0s;
+  -moz-transition: transform .4s ease 0s;
+  -webkit-transition: transform .4s ease 0s;
+  -o-transition: transform .4s ease 0s;
 }
 .w-banner .ban3 .shou-box .wl3-menu li img {
   display: block;
@@ -230,20 +283,27 @@ body {
   width: 0;
   display: block;
   overflow: hidden;
-  transition: all 1s ease 0s;
-  -moz-transition: all 1s ease 0s;
-  -webkit-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
+  transition: width 1s ease 0s;
+  -moz-transition: width 1s ease 0s;
+  -webkit-transition: width 1s ease 0s;
+  -o-transition: width 1s ease 0s;
+  opacity: 1;
 }
 .w-banner .ban3 .wl3-txt-box .txt {
   width: 100%;
   display: block;
-  margin-top: 40%;
+  margin-top: 6%;
   opacity: 0.4;
-  transition: all 1s ease 0s;
-  -moz-transition: all 1s ease 0s;
-  -webkit-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
+  transition: transform 1s ease 0s;
+  -moz-transition: transform 1s ease 0s;
+  -webkit-transition: transform 1s ease 0s;
+  -o-transition: transform 1s ease 0s;
+  opacity: 1;
+  -webkit-transform: translateY(260%);
+  -moz-transform: translateY(260%);
+  -ms-transform: translateY(260%);
+  -o-transform: translateY(260%);
+  transform: translateY(260%);
 }
 .w-banner .swiper-slide-active {
   /*******************
@@ -257,15 +317,27 @@ body {
         *******************/
 }
 .w-banner .swiper-slide-active .txt-box {
-  left: 4%;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
 }
 .w-banner .swiper-slide-active .mb-box {
-  left: 4%;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
 }
 .w-banner .swiper-slide-active .mb-box .sj2,
 .w-banner .swiper-slide-active .mb-box .sj3,
 .w-banner .swiper-slide-active .mb-box .sj4 {
-  margin-left: -8%;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
 }
 .w-banner .swiper-slide-active .pc-box img {
   -webkit-transform: scale(1);
@@ -275,11 +347,19 @@ body {
   transform: scale(1);
 }
 .w-banner .swiper-slide-active .wl2-tit {
-  left: 8%;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
   opacity: 1;
 }
 .w-banner .swiper-slide-active .wl2-txt {
-  left: 9%;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
   opacity: 1;
 }
 .w-banner .swiper-slide-active .wl2-img-box {
@@ -300,15 +380,82 @@ body {
   width: 46%;
 }
 .w-banner .swiper-slide-active .wl3-txt-box .txt {
-  margin-top: 6%;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
   opacity: 1;
+}
+/********************************
+
+********************************/
+@media screen and (max-width: 1020px) {
+  .w-banner .ban1 .txt-box {
+    width: 70%;
+    top: 8%;
+  }
+  .w-banner .ban1 .pc-box {
+    width: 74%;
+    top: 32%;
+    left: 22%;
+  }
+  .w-banner .ban1 .mb-box {
+    width: 72%;
+    top: 74%;
+  }
+  .w-banner .ban2 .wl2-tit {
+    width: 80%;
+    top: 8%;
+  }
+  .w-banner .ban2 .wl2-txt {
+    width: 54%;
+    top: 15%;
+  }
+  .w-banner .ban2 .wl2-img-box {
+    left: 2%;
+    bottom: 17%;
+    width: 96%;
+  }
+  .w-banner .ban3 .wl3-txt-box {
+    width: 82%;
+  }
+  .w-banner .ban3 .shou-box {
+    width: 96%;
+    left: 2%;
+  }
+}
+@media screen and (max-height: 500px) {
+  .w-banner .ban2 .wl2-tit {
+    width: 70%;
+    top: 8%;
+  }
+  .w-banner .ban2 .wl2-txt {
+    width: 42%;
+    top: 15%;
+  }
+  .w-banner .ban2 .wl2-img-box {
+    bottom: 9%;
+    left: 10%;
+    width: 80%;
+  }
+  .w-banner .ban3 .wl3-txt-box {
+    width: 70%;
+    top: 8%;
+  }
+  .w-banner .ban3 .shou-box {
+    width: 82%;
+    left: 9%;
+  }
 }
 /*********************************
     ban3 背景
 **********************************/
-.ban3 {
-  animation: ban3bg 60s linear 0s infinite alternate;
-  -webkit-animation: ban3bg 60s linear 0s infinite alternate;
+@media screen and (min-width: 1020px) {
+  .ban3 {
+    animation: ban3bg 60s linear 0s infinite alternate;
+    -webkit-animation: ban3bg 60s linear 0s infinite alternate;
+  }
 }
 @-webkit-keyframes ban3bg {
   0% {

@@ -22,7 +22,7 @@
                     numberStep: comma_separator_number_step,
                 },2000);
         $('#lines2').animateNumber({ 
-            number: 433 ,
+            number: 1033 ,
             easing: 'linear',
             numberStep: comma_separator_number_step
         },1600);
@@ -32,7 +32,7 @@
             numberStep: comma_separator_number_step
         },1600);
         $('#lines4').animateNumber({ 
-            number: 29 ,
+            number: 129 ,
             easing: 'linear',
             numberStep: comma_separator_number_step
         },1600);
@@ -169,3 +169,78 @@
 
 
 
+function aos_res(){
+    var restime = null;
+    $(window).on('resize',function(){
+        if(restime){
+            clearTimeout(restime);
+        }
+        else{
+            restime = setTimeout(function(){
+                AOS.refresh();
+            },600);
+        }
+    })
+}
+
+
+function changeURLPar(destiny, par, par_value) {
+    var pattern = par + '=([^&]*)';
+    var replaceText = par + '=' + par_value;
+    if (destiny.match(pattern)) {
+        var tmp = '/\\' + par + '=[^&]*/';
+        tmp = destiny.replace(eval(tmp), replaceText);
+        return (tmp);
+    } else {
+        if (destiny.match('[\?]')) {
+            return destiny + '&' + replaceText;
+        } else {
+            return destiny + '?' + replaceText;
+        }
+    }
+    return destiny + '\n' + par + '\n' + par_value;
+}
+ 
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return decodeURI(r[2]);
+    return null;
+}
+ 
+function Tpagesave() {
+    //判断是否支持pushstate
+    if ('pushState' in history) {
+ 
+        $("#pager").on("click", "a", function () {
+            var fun = $(this).attr("onclick");
+            var Turl = window.location.href;
+            //console.log(Turl)
+            var Tnew_url = changeURLPar(Turl, 'Tpagefun', fun)
+            history.pushState(null, null, Tnew_url) //pushState       地址会记录在浏览器历史
+            //history.replaceState(null, null, Tnew_url)  //replaceState  地址不会产生记录浏览器历史
+            //console.log(fun)
+        });
+ 
+        //页面触发onclick
+ 
+        function to_page() {
+            var Tpagefun = getQueryString("Tpagefun");
+            if (Tpagefun) {
+                var val = new Function(Tpagefun);
+                val()
+            }
+        }
+        to_page();
+        //使用pushState时按浏览器返回键发生事件
+        window.onpopstate = function () {
+            //第一页没有onclick的函数 没有Tpagefun 要进行刷新
+            var Tpagefun = getQueryString("Tpagefun");
+            if (Tpagefun) {
+                to_page()
+            } else {
+                location.reload();
+            }
+        };
+    }
+}

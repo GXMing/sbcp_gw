@@ -1,212 +1,16 @@
 @charset "utf-8";
-body,
-ul,
-li,
-p,
-button,
-textarea,
-input,
-h1,
-h2,
-h3,
-figure,
-figcaption,
-dl,
-dd,
-dt {
-  margin: 0;
-  padding: 0;
-  font-family: "微软雅黑", "Microsoft YaHei";
-  font-weight: normal;
-}
-a {
-  text-decoration: none;
-}
-ul {
-  list-style: none;
-}
-p {
-  line-height: 1.6;
-}
-@media screen and (max-width: 321px) {
-  p {
-    font-size: 12px;
-  }
-}
-@media screen and (min-width: 321px) and (max-width: 760px) {
-  p {
-    font-size: 14px;
-  }
-}
-@media screen and (min-width: 760px) {
-  p {
-    font-size: 24px;
-  }
-}
-img {
-  display: block;
-  max-width: 100%;
-}
-/******************************** 阿里巴巴矢量图标 ******************************/
-@font-face {
-  font-family: 'iconfont';
-  src: url('https://at.alicdn.com/t/font_502576_gl8vs9lnnnnah5mi.eot');
-  src: url('https://at.alicdn.com/t/font_502576_gl8vs9lnnnnah5mi.eot?#iefix') format('embedded-opentype'), url('https://at.alicdn.com/t/font_502576_gl8vs9lnnnnah5mi.woff') format('woff'), url('https://at.alicdn.com/t/font_502576_gl8vs9lnnnnah5mi.ttf') format('truetype'), url('https://at.alicdn.com/t/font_502576_gl8vs9lnnnnah5mi.svg#iconfont') format('svg');
-  
-  /* project id 502576 */
-}
-.iconfont {
-  font-family: "iconfont" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.ico-hdbtn:before {
-  content: "\e61a";
-}
-.ico-jt:before {
-  content: "\e604";
-}
-.ico-gb:before {
-  content: "\e688";
-}
-.ico-dh:before {
-  content: "\e645";
-}
-.ico-dianhua:before {
-  content: "\e64c";
-}
-body {
-  max-width: 10.8rem;
-  margin: 0 auto;
-}
-.wrap {
-  width: 9.8rem;
-  margin: 0 auto;
-}
-.clearfix:after {
-  content: "";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  font-size: 0;
-  height: 0;
-}
-/* 导航置顶插件样式 */
-.hd-fixed-top {
-  width: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 90;
-  background-color: inherit;
-  transition: all .5s ease 0s;
-  -moz-transition: all .5s ease 0s;
-  -webkit-transition: all .5s ease 0s;
-  -o-transition: all .5s ease 0s;
-}
-.Thtml-box {
-  margin: 0 auto;
-  overflow: hidden;
-}
-.Tbody-box {
-  position: relative;
-  left: 0;
-  z-index: 70;
-  transition: all .5s ease 0s;
-  -moz-transition: all .5s ease 0s;
-  -webkit-transition: all .5s ease 0s;
-  -o-transition: all .5s ease 0s;
-  background-color: #fff;
-}
-.Tzindex {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  width: 100%;
-  height: 100%;
-  display: none;
-  z-index: 999;
-}
-.header {
-  position: relative;
-  z-index: 1000;
-}
-.nav {
-  position: fixed;
-  top: 0;
-  z-index: 60;
-  height: 100%;
-  display: none;
-  overflow-y: auto;
-}
-/********** 头部 **********/
-.header {
-  background-color: #31417c;
-  height: 1.6rem;
-}
-.header .hd-left {
-  float: left;
-  font-size: 0;
-}
-.header .hd-left a {
-  display: block;
-}
-.header .hd-left .hd-logo {
-  padding-top: .12rem;
-  width: 1.2rem;
-  display: inline-block;
-}
-.header .hd-left .txt {
-  font-size: .36rem;
-  display: inline-block;
-  color: #fff;
-  vertical-align: bottom;
-  margin-left: .2rem;
-}
-.header .hd-nav {
-  float: right;
-  font-size: 0;
-}
-.header .hd-nav a {
-  display: block;
-}
-.header .hd-nav i {
-  color: #fff;
-  font-size: .6rem;
-  display: block;
-  line-height: 1.6rem;
-}
-/******** 导航 *******/
-.nav {
-  width: 5.6rem;
-  background-color: #31417c;
-}
-.nav ul {
-  padding-top: 1.6rem;
-}
-.nav ul li a {
-  display: block;
-  color: #fff;
-  font-size: .42rem;
-  line-height: 1.2rem;
-  text-align: center;
-  border-bottom: 1px solid #fff;
-}
 /********* 主体 ********/
 .main .item-tit {
   color: #333;
   text-align: center;
-  font-size: .54rem;
+  font-size: .46rem;
   padding: 0.4rem 0 .2rem;
 }
 .main .item-txt {
   color: #333;
   text-align: center;
   font-size: .4rem;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 .main .main-banner .swiper-slide img {
   width: 100%;
@@ -294,7 +98,7 @@ body {
 }
 .main .main-service .ser-item .s-box li a .box-tit {
   color: #333;
-  font-size: .46rem;
+  font-size: .42rem;
 }
 .main .main-service .ser-item .s-box li a .box-txt {
   color: #333;
@@ -315,7 +119,7 @@ body {
   height: .64rem;
 }
 .main .main-service .ser-item .s-box li a .col-2 {
-  width: 58%;
+  width: 56%;
 }
 .main .main-service .ser-item .s-box li a .col-3 {
   width: 12%;
@@ -331,6 +135,17 @@ body {
 /************* 策划方案 ***********/
 .main .main-case {
   background-color: #f1f1f1;
+}
+.main .main-case .c-more {
+  padding-top: .4rem;
+}
+.main .main-case .c-more a {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  font-size: .4rem;
+  text-align: center;
+  color: #333;
 }
 .main .main-case .case-bottom {
   background-color: #31417c;
@@ -362,16 +177,6 @@ body {
   margin: 2%;
   border: 1px solid #fff;
   color: #fff;
-}
-.main .main-case .case-bottom .c-more {
-  padding-top: .4rem;
-}
-.main .main-case .case-bottom .c-more a {
-  display: block;
-  width: 40%;
-  margin: 0 auto;
-  color: #fff;
-  font-size: .4rem;
 }
 /* 新闻资讯 */
 .main .main-news {
@@ -488,63 +293,6 @@ body {
 .main .main-contact .item-txt {
   line-height: 1;
 }
-.main .main-contact .form {
-  font-size: 0;
-  margin-top: .4rem;
-}
-.main .main-contact .form input {
-  width: 100%;
-  height: 1rem;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  padding: 0 .4rem;
-  background-color: #fff;
-  border: none;
-  margin-bottom: .4rem;
-}
-.main .main-contact .form textarea {
-  width: 100%;
-  height: 4rem;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  padding: .4rem;
-  background-color: #fff;
-  border: none;
-  margin-bottom: .4rem;
-  resize: none;
-}
-.main .main-contact .form button {
-  width: 60%;
-  height: 1rem;
-  line-height: 1rem;
-  margin: 0 auto;
-  display: block;
-  background-color: #333;
-  text-align: center;
-  color: #fff;
-  border: none;
-}
-/*******************
-    尾部
-********************/
-.footer {
-  background-color: #31417c;
-}
-.footer .ft-txt {
-  padding: .2rem 0;
-}
-.footer .ft-txt p {
-  text-align: center;
-  color: #fff;
-  font-size: .36rem;
-  line-height: 1.4;
-}
-.footer .ft-txt p i {
-  margin-right: .2rem;
-  font-size: .4rem;
-}
 /********************
         弹窗
 *****************/
@@ -631,7 +379,4 @@ body {
   width: 34%;
   height: 1px;
   background-color: #ccc;
-}
-.add {
-  position: fixed;
 }

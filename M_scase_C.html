@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="汕头市三互科技有限公司"/>
+    <meta name="description" contetn="汕头市三互科技有限公司"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>汕头市三互科技有限公司</title>
+    <link type="favicon" rel="shortcut icon" href="sanbou.ico" />
+    <link rel="stylesheet" type="text/css" href="css/M_base_C.css" />
+    <link rel="stylesheet" type="text/css" href="css/M_page_C.css" />
+    <script type="text/javascript" src="js/rem.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/M_header_C.js"></script>
+    <script type="text/javascript">
+    $(function() {
+
+        $(".case-nav").on("click",".nav-tit",function() {
+          var $nav_menu = $(".case-nav .nav-menu")
+           if($nav_menu.is(":hidden")){
+                 $nav_menu.slideDown();
+                 $("body").css("cursor","pointer");
+                 $(document).on("click",function(){
+                    $nav_menu.slideUp();
+                    $("body").css("cursor","auto");
+                    $(document).off();
+                 })
+                 return false;
+           }
+        });
+
+    });
+    </script>
+</head>
+<body>
+
+    <div class="Thtml-box">
+        <!-- 头部 -->
+        <header class="header">
+            <h1 style="display:none;">汕头市三互科技有限公司</h1>
+        </header>
+
+        <!-- 导航 -->
+        <nav class="nav">
+            <h3 style="display:none;">网站导航</h3>
+        </nav>
+        
+
+        <div class="Tbody-box">
+            
+            <!-- 主体 -->
+            <div class="main">
+                <div class="page-banner"><img src="M_image/product-banner.jpg" /></div>
+
+                <div class="case-content">
+                    <h2 class="item-tit">三互科技客户服务案例</h2>
+                    <p class="item-txt">根据每个企业不同的需求<br />为您提供专属于您的互联网营销方案</p>
+                    <div class="case-nav">
+                        <p class="nav-tit">全部<i class="iconfont ico-anxl"></i></p>
+                        <ul class="nav-menu">
+                            <li><a href="###">全部</a></li>
+                            <li><a href="###">化妆品/包材</a></li> 
+                            <li><a href="###">牙刷/日化/酒店用品</a></li>   
+                            <li><a href="###">酒店/休闲场所</a></li> 
+                            <li><a href="###">办公用品/文具</a></li>                                                                          
+                            <li><a href="###">机械</a></li>
+                            <li><a href="###">包装/印刷</a></li>
+                            <li><a href="###">内衣服饰</a></li>
+                            <li><a href="###">食品</a></li>
+                            <li><a href="###">玩具/塑料</a></li>
+                            <li><a href="###">其他</a></li>
+                        </ul>
+                    </div>
+                    <div class="case-menu">
+                        <ul class="clearfix">
+                            <li>
+                                <a href="M_scase_deatils_C.html"><img src="image/mb-1.jpg" /></a>
+                                <p class="c-tit">休闲场所</p>
+                            </li>
+                            <li>
+                                <a href="M_scase_deatils_C.html"><img src="image/mb-2.jpg" /></a>
+                                <p class="c-tit">休闲场所</p>
+                            </li>
+                            <li>
+                                <a href="M_scase_deatils_C.html"><img src="image/mb-5.jpg" /></a>
+                                <p class="c-tit">休闲场所</p>
+                            </li>
+                            <li>
+                                <a href="M_scase_deatils_C.html"><img src="image/mb-6.jpg" /></a>
+                                <p class="c-tit">休闲场所</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 分页 -->
+                    <div class="Tpage-box">
+                        <div id="page">
+                            <span class="disenable"> </span>
+                            <span class="current">1</span>
+                            <a href="###">2</a>
+                            <a href="###">3</a>
+                            <span>....</span>
+                            <a href="###">4</a>
+                            <a href="###"> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 尾部 -->
+            <footer class="footer"></footer>
+        </div>
+    </div>
+
+
+<script type="text/javascript" src="js/correctrem.js"></script>
+</body>
+</html>

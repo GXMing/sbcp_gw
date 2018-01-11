@@ -19,20 +19,30 @@ $(function(){
                                 "<nav class='hd-nav'>"+
                                     "<h3 style='display:none;'>网站导航</h3>"+
                                     "<ul class='clearfix'>"+
-                                        "<li><a href="+index+">首页</a></li>"+
-                                        "<li><a href="+product+">三互产品</a></li>"+
-                                        "<li><a href="+service+">企业服务</a></li>"+
-                                        "<li><a href="+media+">企业传媒</a></li>"+
-                                        "<li><a href="+scase+">服务案例</a></li>"+
-                                        "<li><a href="+news+">行业资讯</a></li>"+
-                                        "<li><a href="+contact+">联系我们</a></li>"+
+                                        "<li class='nav-item'><a href="+index+">首页</a></li>"+
+                                        "<li class='nav-item'>"+
+                                            "<a href="+product+">三互产品</a>"+
+                                            // "<ul class='subnav'>"+
+                                            //     "<li class='subnav-item'>"+
+                                            //         "<a href='###'>ddd</a>"+
+                                            //         "<a href='###'>ddd</a>"+
+                                            //         "<a href='###'>ddd</a>"+
+                                            //         "<a href='###'>ddd</a>"+
+                                            //     "</li>"+
+                                            // "</ul>"+
+                                        "</li>"+
+                                        "<li class='nav-item'><a href="+service+">企业服务</a></li>"+
+                                        "<li class='nav-item'><a href="+media+">企业传媒</a></li>"+
+                                        "<li class='nav-item'><a href="+scase+">服务案例</a></li>"+
+                                        "<li class='nav-item'><a href="+news+">行业资讯</a></li>"+
+                                        "<li class='nav-item'><a href="+contact+">联系我们</a></li>"+
                                     "</ul>"+
                                 "</nav>"+
                             "</div>";
 
         var footer_add = "<div class='ft-txt'>"+
-                            "<p><i class='iconfont ico-dianhua'></i><span>客服：0754-88123456</span></p>"+
-                            "<p><i class='iconfont ico-yj'></i><span>传真：0754-88123456</span></p>"+
+                            "<p><i class='iconfont ico-dianhua'></i><span>客服：0754-87231283</span></p>"+
+                            "<p><i class='iconfont ico-yj'></i><span>传真：0754-87231283</span></p>"+
                             "<p><i class='iconfont ico-dh'></i><span>地址：广东省汕头市金平区友谊大厦2101</span></p>"+
                         "</div>";
 
@@ -45,7 +55,7 @@ $(function(){
         导航样式添加
      ************************************/
     function nav_act(n){
-        $(".hd-nav ul li").eq(n).addClass('active').siblings('li').removeClass('active');
+        $(".hd-nav ul .nav-item").eq(n).addClass('active').siblings('li').removeClass('active');
     };
     function nav_reg(){
         //获取文件名

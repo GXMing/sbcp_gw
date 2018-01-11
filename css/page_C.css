@@ -311,6 +311,10 @@
   -o-transition: all .5s ease 0s;
   position: relative;
 }
+.main .product-content .product-top .top-menu li a {
+  display: block;
+  color: inherit;
+}
 .main .product-content .product-top .top-menu li .p-ico {
   padding: 40px 0 18px;
 }
@@ -366,6 +370,9 @@
   -ms-transform: translateY(-16px);
   -o-transform: translateY(-16px);
   transform: translateY(-16px);
+}
+.main .product-content .product-top .top-menu li:hover a {
+  color: inherit;
 }
 .main .product-content .product-top .top-menu li:hover .p-tit {
   color: #fff;
@@ -456,7 +463,7 @@
 }
 .main .product-content .p-ft .btn-box {
   display: inline-block;
-  margin: 0 64px;
+  margin: 0 60px;
   vertical-align: middle;
 }
 .main .product-content .p-ft .btn-box a {
@@ -469,9 +476,6 @@
   color: #506cd6;
   font-size: 26px;
   position: relative;
-  box-shadow: 4px 4px 0 0 rgba(163, 123, 26, 0.6);
-  -moz-box-shadow: 4px 4px 0 0 rgba(163, 123, 26, 0.6);
-  -webkit-box-shadow: 4px 4px 0 0 rgba(163, 123, 26, 0.6);
   margin: 0 10px;
   transition: all .4s ease 0s;
   -moz-transition: all .4s ease 0s;
@@ -479,28 +483,8 @@
   -o-transition: all .4s ease 0s;
 }
 .main .product-content .p-ft .btn-box a:hover {
-  -webkit-transform: translate(-4px, -4px);
-  -moz-transform: translate(-4px, -4px);
-  -ms-transform: translate(-4px, -4px);
-  -o-transform: translate(-4px, -4px);
-  transform: translate(-4px, -4px);
-}
-.main .product-content .p-ft .btn-box a:hover {
-  box-shadow: 12px 12px 0 0 rgba(163, 123, 26, 0.6);
-  -moz-box-shadow: 12px 12px 0 0 rgba(163, 123, 26, 0.6);
-  -webkit-box-shadow: 12px 12px 0 0 rgba(163, 123, 26, 0.6);
-}
-.main .product-content .p-ft .btn-box .jz {
   color: #3f4041;
   background-color: #c1c1c1;
-  box-shadow: 4px 4px 0 0 rgba(119, 119, 118, 0.6);
-  -moz-box-shadow: 4px 4px 0 0 rgba(119, 119, 118, 0.6);
-  -webkit-box-shadow: 4px 4px 0 0 rgba(119, 119, 118, 0.6);
-}
-.main .product-content .p-ft .btn-box .jz:hover {
-  box-shadow: 12px 12px 0 0 rgba(119, 119, 118, 0.6);
-  -moz-box-shadow: 12px 12px 0 0 rgba(119, 119, 118, 0.6);
-  -webkit-box-shadow: 12px 12px 0 0 rgba(119, 119, 118, 0.6);
 }
 .main .product-content .p-ft .phone-box {
   display: inline-block;
@@ -812,10 +796,15 @@
 .main .scase-content .scase-nav li:hover a {
   color: #eec630;
 }
+.main .scase-content .scase-menu {
+
+}
 .main .scase-content .scase-menu li {
   float: left;
   position: relative;
   margin: 36px 26px;
+  height: 374px;
+  width: 530px;
   /******************** 电脑和手机移入的hover *****************/
 }
 .main .scase-content .scase-menu li .ico-box {
@@ -929,6 +918,25 @@
   font-size: 20px;
   text-align: center;
   margin-top: 10px;
+}
+.main .scase-content .scase-menu .only-c-mb .c-pc {
+  display: none;
+}
+.main .scase-content .scase-menu .only-c-mb .c-mb {
+  position: relative;
+  background-size: contain;
+  width: 530px;
+  height: 336px;
+  top: auto;
+  left: auto;
+  padding-top: 34px;
+}
+.main .scase-content .scase-menu .only-c-mb .c-mb .mb-box {
+  width: 142px;
+  height: 248px;
+}
+.main .scase-content .scase-menu .only-c-mb .c-mb .mb-box .ico {
+  padding-top: 68px;
 }
 /********************************
         服务案例手机弹框

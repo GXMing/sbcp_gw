@@ -321,6 +321,10 @@
                 -webkit-transition:all .5s ease 0s; 
                 -o-transition:all .5s ease 0s;
                 position: relative;
+                a{
+                    display:block;
+                    color:inherit;
+                }
                 .p-ico{
                     padding:40px 0 18px;
                     i{
@@ -378,6 +382,9 @@
                      -o-transform: translateY(-16px);
                         transform: translateY(-16px);
                 // box-shadow:0 0 12px 4px #9f9f9f;
+                a{
+                    color:inherit;
+                }
                 .p-tit{
                     color:#fff;
                 }
@@ -472,7 +479,7 @@
         }
         .btn-box{
             display:inline-block;
-            margin: 0 64px;
+            margin: 0 60px;
             vertical-align: middle;
             a{
                 display:inline-block;
@@ -484,9 +491,9 @@
                 color:#506cd6;
                 font-size: 26px;
                 position:relative;
-                box-shadow:4px 4px 0 0 rgba(163, 123, 26, .6);
-                -moz-box-shadow:4px 4px 0 0 rgba(163, 123, 26, .6);
-                -webkit-box-shadow:4px 4px 0 0 rgba(163, 123, 26, .6);
+                // box-shadow:4px 4px 0 0 rgba(163, 123, 26, .6);
+                // -moz-box-shadow:4px 4px 0 0 rgba(163, 123, 26, .6);
+                // -webkit-box-shadow:4px 4px 0 0 rgba(163, 123, 26, .6);
                 margin:0 10px;
                 transition:all .4s ease 0s;
                 -moz-transition:all .4s ease 0s; 
@@ -494,29 +501,31 @@
                 -o-transition:all .4s ease 0s;
             }
             a:hover{
-                -webkit-transform: translate(-4px,-4px);
-                   -moz-transform: translate(-4px,-4px);
-                    -ms-transform: translate(-4px,-4px);
-                     -o-transform: translate(-4px,-4px);
-                        transform: translate(-4px,-4px);
-            }
-            a:hover{
-                box-shadow:12px 12px 0 0 rgba(163, 123, 26, .6);
-                -moz-box-shadow:12px 12px 0 0 rgba(163, 123, 26, .6);
-                -webkit-box-shadow:12px 12px 0 0 rgba(163, 123, 26, .6);
-            }
-            .jz{
+                // -webkit-transform: translate(-4px,-4px);
+                //    -moz-transform: translate(-4px,-4px);
+                //     -ms-transform: translate(-4px,-4px);
+                //      -o-transform: translate(-4px,-4px);
+                //         transform: translate(-4px,-4px);
                 color:#3f4041;
                 background-color: #c1c1c1;
-                box-shadow:4px 4px 0 0 rgba(119, 119, 118, 0.6);
-                -moz-box-shadow:4px 4px 0 0 rgba(119, 119, 118, 0.6);
-                -webkit-box-shadow:4px 4px 0 0 rgba(119, 119, 118, 0.6);
             }
-            .jz:hover{
-                box-shadow:12px 12px 0 0 rgba(119, 119, 118, 0.6);
-                -moz-box-shadow:12px 12px 0 0 rgba(119, 119, 118, 0.6);
-                -webkit-box-shadow:12px 12px 0 0 rgba(119, 119, 118, 0.6);
-            }
+            // a:hover{
+            //     box-shadow:12px 12px 0 0 rgba(163, 123, 26, .6);
+            //     -moz-box-shadow:12px 12px 0 0 rgba(163, 123, 26, .6);
+            //     -webkit-box-shadow:12px 12px 0 0 rgba(163, 123, 26, .6);
+            // }
+            // .jz{
+            //     color:#3f4041;
+            //     background-color: #c1c1c1;
+            //     box-shadow:4px 4px 0 0 rgba(119, 119, 118, 0.6);
+            //     -moz-box-shadow:4px 4px 0 0 rgba(119, 119, 118, 0.6);
+            //     -webkit-box-shadow:4px 4px 0 0 rgba(119, 119, 118, 0.6);
+            // }
+            // .jz:hover{
+            //     box-shadow:12px 12px 0 0 rgba(119, 119, 118, 0.6);
+            //     -moz-box-shadow:12px 12px 0 0 rgba(119, 119, 118, 0.6);
+            //     -webkit-box-shadow:12px 12px 0 0 rgba(119, 119, 118, 0.6);
+            // }
         }
         .phone-box{
             display:inline-block;
@@ -845,6 +854,8 @@
             float:left;
             position: relative;
             margin:36px 26px;
+            height: 374px;
+            width: 530px;
             /******************** 电脑和手机移入的hover *****************/
             .ico-box{
                 position: relative;
@@ -961,6 +972,28 @@
                 font-size:20px;
                 text-align: center;
                 margin-top:10px;
+            }
+        }
+        /******* 仅手机 ******/
+        .only-c-mb{
+            .c-pc{
+                display:none;
+            }
+            .c-mb{
+                position: relative;
+                background-size: contain;
+                width: 530px;
+                height: 336px;
+                top:auto;
+                left:auto;
+                padding-top: 34px;
+                .mb-box{
+                    width: 142px;
+                    height:248px;
+                    .ico{
+                        padding-top: 68px;
+                    }
+                }
             }
         }
     }
